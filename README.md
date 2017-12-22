@@ -6,10 +6,10 @@ Simple Python utility that accepts a URL from the command line and tests all the
 Python 3.6 installed and configured in your path
 
 ### Use
-Navigate your CLI to the directory where this script is cloned, run the command in pass in the URL to test.
+Navigate your CLI to the directory where this script is cloned, run the command and pass in the URL to test.
 
 ```
-python Dead_URL_Tester.py http://www.google.com
+python Dead_URL_Tester.py http://www.url_to_test.com
 ```
 
 ## Built With
