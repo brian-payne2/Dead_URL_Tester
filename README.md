@@ -14,7 +14,7 @@ python Dead_URL_Tester.py http://www.url_to_test.com
 
 ## Built With
 * Python 3.6
-* BeautifulSoup plugin for Python
+* BeautifulSoup library
 
 ## Author
 Brian Payne - [brian.payne2@gmail.com](mailto:brian.payne2@gmail.com)
