@@ -26,14 +26,17 @@ soup = BeautifulSoup(r.content, "html.parser")
 for a in soup.findAll("a", href=True):
 	link_list.append(a['href'])
 
-# Iterate through link_list
+# Scrub URLs and fire off test
 for link in link_list:
-	# Scrub URLs
+	if link[0] == '/' or link[0] == '#':
+		link = base_url + link
 	if link[:4] == 'http':
-		#print(link)
 		link_request = requests.get(link)
-		if str(link_request.status_code)[0] == '2':
+		if str(link_request.status_code)[0] == '4':
 			bad_links.append(link)
 
 # Print output to console
-print(bad_links)
+if not bad_links:
+    print("Yay! No dead links found.")
+for dl in bad_links:
+	print("BAD LINK FOUND: ", dl)
