@@ -18,10 +18,10 @@ print("This is the name of the script: ", sys.argv[0])
 print("The website to test is: " , base_url)
 
 # Prepare request
-r = requests.get(str(base_url))
+r = requests.get(base_url)
 soup = BeautifulSoup(r.content, "html.parser")
 
-# Iterate through Monetate HTML to get link_list of all valid hyperlinks
+# Grab the HTML to get link_list of all valid hyperlinks
 # *** NOTE: only checks links that have href attributes ***
 for a in soup.findAll("a", href=True):
 	link_list.append(a['href'])
